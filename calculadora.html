@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Consum i Sostenibilitat - Barcelona</title>
+    <link rel="stylesheet" href="calculadora.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <header class="header">
+        <h1>PANEL DE CONTROL AMBIENTAL</h1>
+        <p>Anàlisi de Consum i Estalvi Econòmic (Tarifes Cat/Esp)</p>
+    </header>
+
+    <section class="seccio-card">
+        <h2>1. Calculadora de Consums Base</h2>
+        <div class="grid-inputs-2x2">
+            <div class="input-group">
+                <label>⚡ Electricitat (Mitjana mensual)</label>
+                <div class="input-controls">
+                    <input type="number" id="v1" value="0" oninput="calc()">
+                    <span class="fix-unit">kWh</span>
+                </div>
+                <div class="dades-mini">
+                    <div>12 Mesos: <span class="data-val" id="r1">0.00</span> kWh</div>
+                    <div>Set-Jun: <span class="data-val" id="r2">0.00</span> kWh</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>💧 Aigua (Mitjana mensual)</label>
+                <div class="input-controls">
+                    <input type="number" id="v2" value="0" oninput="calc()">
+                    <span class="fix-unit">L</span>
+                </div>
+                <div class="dades-mini">
+                    <div>12 Mesos: <span class="data-val" id="r3">0.00</span> L</div>
+                    <div>Set-Jun: <span class="data-val" id="r4">0.00</span> L</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>📎 Oficina (Unitats mensuals)</label>
+                <div class="input-details-grid">
+                    <div class="sim-row">
+                        <small>Packs Paper 500 fulls (5,34€):</small>
+                        <input type="number" id="v3_paper" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Marcadors Pissarra (0,89€):</small>
+                        <input type="number" id="v3_marcadors" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Borrador No Magnètic (6,83€):</small>
+                        <input type="number" id="v3_borrador" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Recanvi Borrador (5,60€):</small>
+                        <input type="number" id="v3_recanvi" value="0" oninput="calc()">
+                    </div>
+                </div>
+                <div class="dades-mini">
+                    <div>Mes: <span class="data-val" id="r5_mes">0.00</span> €</div>
+                    <div>11 Mesos: <span class="data-val" id="r5">0.00</span> €</div>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>✨ Neteja (Unitats mensuals)</label>
+                <div class="input-details-grid">
+                    <div class="sim-row">
+                        <small>Sacs industrials (1,51€):</small>
+                        <input type="number" id="v4_sac" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Bosses d'escombreries petites (1,13€):</small>
+                        <input type="number" id="v4_bossa" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Paper WC Industrial (25,67€):</small>
+                        <input type="number" id="v4_pwc" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Paper Mecha (18,25€):</small>
+                        <input type="number" id="v4_mecha" value="0" oninput="calc()">
+                    </div>
+                    <div class="sim-row">
+                        <small>Sabó mans 5L (8,50€):</small>
+                        <input type="number" id="v4_sabo" value="0" oninput="calc()">
+                    </div>
+                </div>
+                <div class="dades-mini">
+                    <div>Mes: <span class="data-val" id="r7_mes">0.00</span> €</div>
+                    <div>12 Mesos: <span class="data-val" id="r7">0.00</span> €</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccio-card">
+        <h2>2. Pla de Reducció d'Impacte (3 Anys)</h2>
+        <table class="taula-tech">
+            <thead>
+                <tr>
+                    <th>Indicador</th>
+                    <th>Acció Concreta</th>
+                    <th>Cronograma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Energia</b></td>
+                    <td>Ajust d'aire condicionat, sensors i plaques solars.</td>
+                    <td>Anys 1-2</td>
+                </tr>
+                <tr>
+                    <td><b>Aigua</b></td>
+                    <td>Airejadors de baix cabal i fluxòmetres.</td>
+                    <td>Any 1</td>
+                </tr>
+                <tr>
+                    <td><b>Oficina</b></td>
+                    <td>Digitalització documental i recàrrega de tòners.</td>
+                    <td>Anys 1-3</td>
+                </tr>
+                <tr>
+                    <td><b>Neteja</b></td>
+                    <td>Dosificació automàtica i compra a granel.</td>
+                    <td>Any 2</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="seccio-card">
+        <h2>3. Detalls i Simuladors d'Estalvi</h2>
+        <div class="accordion-container">
+            <details open>
+                <summary>
+                    <div class="summary-content">
+                        <span class="summary-title">⚡ Detalls i Simulador d'Electricitat</span>
+                        <div class="summary-stats">
+                            <span class="stat-label">actual</span>
+                            <span id="comp-elec-actual" class="stat-value">0 kWh</span>
+                            <span class="stat-arrow">➔</span>
+                            <span id="comp-elec-millora" class="stat-value val-success">0 kWh</span>
+                            <span id="label-elec-status" class="stat-label">(millorat)</span>
+                        </div>
+                    </div>
+                    <div id="balance-elec" class="balance-recursos">Balance: 0 kWh</div>
+                </summary>
+                <div class="details-content simulator-box">
+                    <div class="sim-sub-box">
+                        <h4>❄️ Aire Condicionat (Estiu)</h4>
+                        <div class="sim-row">
+                            <label>Nombre d'aules amb AC:</label>
+                            <input type="number" id="ac-unitats" value="22" oninput="calc()">
+                        </div>
+                        <div class="sim-row">
+                            <label>Potència mitjana per aula (kW):</label>
+                            <input type="number" id="ac-potencia" value="2.5" step="0.1" oninput="calc()">
+                        </div>
+                        <div class="sim-row">
+                            <label>Hores d'ús diàries:</label>
+                            <input type="number" id="ac-hores" value="12" oninput="calc()">
+                        </div>
+                        <div class="sim-row" style="margin-top:15px; border-top: 1px solid #ddd; padding-top:10px;">
+                            <label>Temp. actual consigna (ºC)</label>
+                            <input type="number" id="inp-temp-actual" value="21" oninput="calc()">
+                        </div>
+                        <div class="sim-row">
+                            <label>Nova consigna d'estalvi (ºC)</label>
+                            <input type="number" id="inp-temp-nou" value="21" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span id="label-ac-result">Estalvi en climatització:</span>
+                            <div class="sim-result">
+                                <b id="est-temp">0.0</b> kWh<br>
+                                <small>(<span id="est-temp-mes">0.0</span> kWh/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-sub-box">
+                        <h4>☀️ Generació d'Energia Solar</h4>
+                        <p class="sim-desc-tecnica">Referència: Panell monocristal·lí N-Type de 500W. El càlcul es basa en una producció mitjana anual optimitzada per a l'exposició solar de Barcelona (1.500h de sol).</p>
+                        <div class="sim-row">
+                            <label>Plaques solars [núm.]</label>
+                            <input type="number" id="inp-plaques" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Energia verda generada:</span>
+                            <div class="sim-result">
+                                <b id="est-plaques">0.0</b> kWh<br>
+                                <small>(<span id="est-plaques-mes">0.0</span> kWh/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-sub-box">
+                        <h4>🚶 Il·luminació de Passadissos</h4>
+                        <p class="sim-desc-tecnica">Instal·lació de sensors infrarojos de moviment. Cada passadís requereix 3 sensors per cobrir tota la longitud sense zones cegues.</p>
+                        <div class="sim-row">
+                            <label>Passadissos a equipar [núm.]</label>
+                            <input type="number" id="inp-mov" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row">
+                            <label>Total sensors:</label>
+                            <input type="number" id="total-sensors" value="0" readonly style="background: #f3f4f6;">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Estalvi en passadissos:</span>
+                            <div class="sim-result">
+                                <b id="est-passadissos">0.0</b> kWh<br>
+                                <small>(<span id="est-passadissos-mes">0.0</span> kWh/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-sub-box">
+                        <h4>🎓 Il·luminació d'Aules</h4>
+                        <p class="sim-desc-tecnica">Regulació de flux per fotocèl·lula. El sistema ajusta els LED per mantenir 500 lux constants segons la llum natural exterior, estalviant energia en hores de sol.</p>
+                        <div class="sim-row">
+                            <label>Aules amb regulació lux [núm.]</label>
+                            <input type="number" id="inp-llum" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Estalvi en aules:</span>
+                            <div class="sim-result">
+                                <b id="est-aules">0.0</b> kWh<br>
+                                <small>(<span id="est-aules-mes">0.0</span> kWh/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+
+            <details>
+                <summary>
+                    <div class="summary-content">
+                        <span class="summary-title">💧 Detalls i Simulador d'Aigua</span>
+                        <div class="summary-stats">
+                            <span class="stat-label">actual</span>
+                            <span id="comp-aigua-actual" class="stat-value">0 L</span>
+                            <span class="stat-arrow">➔</span>
+                            <span id="comp-aigua-millora" class="stat-value val-success">0 L</span>
+                            <span id="label-aigua-status" class="stat-label">(millorat)</span>
+                        </div>
+                    </div>
+                    <div id="balance-aigua" class="balance-recursos">Balance: 0 L</div>
+                </summary>
+                <div class="details-content simulator-box">
+                    <div class="sim-sub-box">
+                        <h4>🚰 Airejadors d'Alta Eficiència</h4>
+                        <p class="sim-desc-tecnica">Dispositius que barregen aire amb l'aigua. Redueixen el cabal de 12L/min a 5L/min sense perdre la sensació de pressió en el rentat de mans.</p>
+                        <div class="sim-row">
+                            <label>Aixetes amb airejador [núm.]</label>
+                            <input type="number" id="inp-airejadors" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Aigua estalviada:</span>
+                            <div class="sim-result">
+                                <b id="est-airejadors">0.0</b> L<br>
+                                <small>(<span id="est-airejadors-mes">0.0</span> L/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-sub-box">
+                        <h4>🚽 Fluxòmetres de Doble Descàrrega</h4>
+                        <p class="sim-desc-tecnica">Substitució de descàrregues uniques per sistemes de 3L/6L. L'estalvi es calcula basant-se en una mitjana de 3 usos diaris per usuari.</p>
+                        <div class="sim-row">
+                            <label>WC amb fluxòmetre instal·lat [núm.]</label>
+                            <input type="number" id="inp-fluxometres" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Aigua estalviada:</span>
+                            <div class="sim-result">
+                                <b id="est-fluxometres">0.0</b> L<br>
+                                <small>(<span id="est-fluxometres-mes">0.0</span> L/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-sub-box">
+                        <h4>🍃 Urinaris Secs (Sense Aigua)</h4>
+                        <p class="sim-desc-tecnica">Sistemes amb vàlvula de sifó líquid que eliminen completament el consum d'aigua per descàrrega (estalvi de 3L per cada ús).</p>
+                        <div class="sim-row">
+                            <label>Urinaris a instal·lar [núm.]</label>
+                            <input type="number" id="inp-urinaris" value="0" min="0" oninput="calc()">
+                        </div>
+                        <div class="sim-row-result">
+                            <span>Aigua estalviada:</span>
+                            <div class="sim-result">
+                                <b id="est-urinaris">0.0</b> L<br>
+                                <small>(<span id="est-urinaris-mes">0.0</span> L/mes)</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="seccio-card highlight-section">
+        <h2>4. Impacte Econòmic Global Estimat</h2>
+        <div class="comparativa-grid">
+            <div class="comp-box">
+                <h3>Despesa Actual Anual</h3>
+                <div class="big-number" id="totalActual">0.00 <span class="unit">€</span></div>
+                <div class="dades-mini-col">
+                    <div>Llum: <span class="data-val" id="eur-llum-actual">0.00</span> €</div>
+                    <div>Aigua: <span class="data-val" id="eur-aigua-actual">0.00</span> €</div>
+                </div>
+            </div>
+            <div class="fletxa">➡</div>
+            <div class="comp-box futur">
+                <h3>Despesa Millorada Anual</h3>
+                <div class="big-number" id="totalMillora">0.00 <span class="unit">€</span></div>
+                <div class="dades-mini-col">
+                    <div>Llum: <span class="data-val" id="eur-llum-millora">0.00</span> €</div>
+                    <div>Aigua: <span class="data-val" id="eur-aigua-millora">0.00</span> €</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="estalvi-banner">
+            <div class="estalvi-text">ESTALVI ECONÒMIC REAL ACONSEGUIT:</div>
+            <div class="estalvi-valor" id="estalvi">0.00 €</div>
+        </div>
+
+        <p class="nota-conversio">
+            * Nota: Càlcul basat en una conversió de <b>0.20 € per cada kWh</b> d'electricitat i <b>0.003 € per cada Litre</b> d'aigua.
+        </p>
+    </section>
+</div>
+
+<script src="calculadora.js"></script>
+</body>
+</html>

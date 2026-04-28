@@ -1,0 +1,223 @@
+:root {
+    --bg-body: #f3f4f6;
+    --bg-card: #ffffff;
+    --bg-input: #f9fafb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --border-light: #e5e7eb;
+    --border-focus: #9ca3af;
+    --accent-success: #059669;
+    --accent-danger: #dc2626;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.dashboard { max-width: 950px; width: 100%; display: flex; flex-direction: column; gap: 30px; }
+.header { text-align: center; margin-bottom: 10px; }
+.header h1 { text-transform: uppercase; font-size: 26px; }
+
+.seccio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    padding: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.grid-inputs-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* Estilos para el desglose de Oficina */
+.input-details-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: var(--bg-input);
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid var(--border-light);
+    margin-bottom: 12px;
+}
+
+.input-details-grid .sim-row {
+    margin-bottom: 0;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.input-details-grid small {
+    font-size: 11px;
+    color: var(--text-main);
+}
+
+.input-details-grid input[type="number"] {
+    padding: 4px 8px;
+    width: 60px !important;
+}
+
+.input-controls { display: flex; gap: 10px; margin-bottom: 12px; }
+input[type="number"] {
+    background: #fff;
+    border: 1px solid var(--border-light);
+    padding: 12px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.fix-unit {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background: var(--bg-input);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.dades-mini {
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-light);
+}
+
+.dades-mini-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 15px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.data-val { font-weight: bold; color: var(--text-main); }
+
+.taula-tech { width: 100%; border-collapse: collapse; margin-top: 15px; }
+.taula-tech th, .taula-tech td { padding: 15px 10px; border-bottom: 1px solid var(--border-light); text-align: left; }
+
+details { border: 1px solid var(--border-light); border-radius: 6px; background: var(--bg-input); margin-bottom: 10px; }
+summary { padding: 15px; font-weight: bold; cursor: pointer; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.details-content { padding: 15px; background: #fff; }
+
+.sim-sub-box { background: var(--bg-body); border-radius: 8px; padding: 20px; margin-bottom: 20px; }
+.sim-desc-tecnica { font-size: 12px; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
+.sim-row { display: flex; align-items: center; margin-bottom: 10px; }
+.sim-row label { flex: 1; }
+.sim-row input { width: 80px !important; }
+.sim-row-result { display: flex; justify-content: space-between; margin-top: 15px; font-weight: bold; border-top: 1px dashed #ccc; padding-top: 10px; }
+
+.sim-result small { display: block; font-size: 12px; color: var(--text-muted); font-weight: normal; margin-top: 2px; }
+
+.comparativa-grid { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-top: 20px; }
+.comp-box { flex: 1; background: var(--bg-input); padding: 25px; text-align: center; border-radius: 6px; }
+.big-number { font-size: 28px; font-weight: bold; }
+.futur .big-number { color: var(--accent-success); }
+.estalvi-banner { margin-top: 20px; padding: 25px; display: flex; justify-content: space-between; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; }
+.estalvi-valor { font-size: 32px; font-weight: bold; color: var(--accent-success); }
+
+.nota-conversio {
+    margin-top: 15px;
+    font-size: 12px;
+    color: #6b7280;
+    text-align: center;
+    font-style: italic;
+    border-top: 1px solid var(--border-light);
+    padding-top: 10px;
+}
+
+summary { list-style: none; }
+summary::-webkit-details-marker { display: none; }
+
+.summary-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.summary-title { font-weight: bold; }
+
+.summary-stats {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+}
+
+.stat-label { font-size: 9px; text-transform: uppercase; color: var(--text-muted); }
+.stat-value { font-size: 14px; font-weight: bold; }
+.stat-arrow { color: var(--accent-success); font-weight: bold; }
+
+.val-success { color: var(--accent-success) !important; }
+.val-danger { color: var(--accent-danger) !important; }
+
+.balance-recursos {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    border: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.balance-recursos.bg-success { background-color: #f0fdf4; border-color: #bbf7d0; color: var(--accent-success); }
+.balance-recursos.bg-danger { background-color: #fef2f2; border-color: #fecaca; color: var(--accent-danger); }
+
+.summary-content::after {
+    content: '\276F';
+    position: absolute;
+    right: -10px;
+    transition: transform 0.3s;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+details[open] .summary-content::after {
+    transform: rotate(90deg);
+}
+
+.sim-desc-tecnica {
+    font-style: normal;
+    line-height: 1.4;
+    color: #4b5563;
+    background: #ffffff;
+    padding: 8px;
+    border-left: 3px solid var(--accent-success);
+    margin-bottom: 15px;
+}
+
+input[readonly] {
+    cursor: not-allowed;
+    outline: none;
+}
